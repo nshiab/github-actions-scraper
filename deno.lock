@@ -1,0 +1,22 @@
+{
+  "version": "4",
+  "specifiers": {
+    "npm:fast-xml-parser@^5.2.0": "5.2.0"
+  },
+  "npm": {
+    "fast-xml-parser@5.2.0": {
+      "integrity": "sha512-Uw9+Mjt4SBRud1IcaYuW/O0lW8SKKdMl5g7g24HiIuyH5fQSD+AVLybSlJtqLYEbytVFjWQa5DMGcNgeksdRBg==",
+      "dependencies": [
+        "strnum"
+      ]
+    },
+    "strnum@2.0.5": {
+      "integrity": "sha512-YAT3K/sgpCUxhxNMrrdhtod3jckkpYwH6JAuwmUdXZsmzH1wUyzTMrrK2wYCEEqlKwrWDd35NeuUkbBy/1iK+Q=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "npm:fast-xml-parser@^5.2.0"
+    ]
+  }
+}

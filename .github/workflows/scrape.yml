@@ -1,0 +1,23 @@
+name: Scrape Montreal temperature
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checking out the repo
+        uses: actions/checkout@v4
+      - name: Set up Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Run main.ts
+        run: deno -A main.ts
+      - name: Commit changes
+        run: git config user.name "Automated" && git config user.email "actions@users.noreply.github.com" && git add -A && git commit -m "Automated update" && git push
