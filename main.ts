@@ -1,7 +1,7 @@
 import { XMLParser } from "fast-xml-parser";
 
 const response = await fetch(
-  "https://dd.weather.gc.ca/observations/swob-ml/latest/CWTQ-AUTO-minute-swob.xml",
+  "https://dd.weather.gc.ca/today/observations/swob-ml/latest/CWTQ-AUTO-minute-swob.xml",
 );
 const xml = await response.text();
 const json = new XMLParser({ ignoreAttributes: false }).parse(xml);
